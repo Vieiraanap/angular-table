@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TableComponent } from './table.component';
 
 const routes: Routes = [
   {
-    path: 'generic-table',
-    loadChildren: () => import('./components/table/table.module').then(m => m.TableModule),
+    path: '',
+    component: TableComponent,
+    title: 'Tabela Genérica'
   }
 ];
 
@@ -12,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class TableRoutingModule { }
