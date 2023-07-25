@@ -1,0 +1,93 @@
+.tr-details:hover .td-details {
+  cursor: pointer;
+  color: #767676;
+}
+
+.td-no-details {
+  cursor: default;
+}
+
+p {
+  text-transform: capitalize;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 120%;
+  color: black;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .mat-table {
+    border: 0;
+    vertical-align: middle
+  }
+
+  .mat-table caption {
+    font-size: 1em;
+  }
+
+  /*  esconder o header */
+  .mat-header-cell {
+    border: 10px solid;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  tr.mat-row {
+    height: auto !important;
+  }
+
+  td.mat-cell {
+    border-bottom-style: none ;
+  }
+
+  .mat-table .mat-row {
+    border-bottom: 5px solid #ddd;
+  }
+
+  .mat-table .mat-cell {
+    display: block;
+    font-size: 1em;
+    text-align: right;
+    /* float: left; */
+    height:30px;
+    margin-bottom: 4%;
+  }
+
+  /* exibe os nomes das colunas ao lado dos valores */
+  .mat-table .mat-cell:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 120%;
+    color: black;
+    margin-bottom: 0;
+  }
+
+  .mat-table .mat-cell:last-child {
+    border-bottom: 0;
+  }
+
+  .mat-table .mat-cell:first-child {
+    margin-top: 4%;
+  }
+
+  th.mat-header-cell:first-of-type,
+  td.mat-cell:first-of-type,
+  th.mat-header-cell:last-of-type,
+  td.mat-cell:last-of-type {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
