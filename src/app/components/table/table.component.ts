@@ -59,10 +59,19 @@ export class TableComponent implements OnChanges {
   // exibe a coluna com ações crud
   @Input() showCrudActions?: boolean = false;
 
-  // exibe cada ação crud permitida na tabela
+  // exibe botão para criar objeto
   @Input() showCreateButton?: boolean = false;
+
+  // detalhes do objeto acessados via botão
   @Input() showRetrieveButton?: boolean = false;
+
+  // detalhes do objeto acessados via clique na linha
+  @Input() showRetrieveCell?: boolean = false;
+
+  // exibe botão para atualizar objeto
   @Input() showUpdateButton?: boolean = false;
+
+  // exibe botão para excluir objeto
   @Input() showDeleteButton?: boolean = false;
 
   // notifica o componente pai qual ação crud e objeto foram chamados

@@ -1,0 +1,17 @@
+<!--
+  os botões exibidos na coluna de ações são escolhidos
+  no componente em que a tabela será exibida
+-->
+<div>
+  <button mat-mini-fab color="primary" aria-label="Botão Visualizar Detalhes" *ngIf="showRetrieve" (click)="emitCrudAction(crudAction.Retrieve, object)">
+    <mat-icon></mat-icon>
+  </button>
+
+  <button mat-mini-fab color="primary" aria-label="Botão Editar" *ngIf="showUpdate" (click)="emitCrudAction(crudAction.Update, object)">
+    <mat-icon>pencil</mat-icon>
+  </button>
+
+  <button mat-mini-fab color="primary" aria-label="Botão Excluir" *ngIf="showDelete" (click)="emitCrudAction(crudAction.Delete, object)">
+    <mat-icon>trash</mat-icon>
+  </button>
+</div>

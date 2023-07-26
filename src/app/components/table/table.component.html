@@ -14,15 +14,15 @@
 
     <!-- coluna com os botões de crud -->
     <ng-container *ngIf="column.typeColumn === columnType.Crud">
-        <td mat-cell *matCellDef="let objeto">
-            <!-- <app-coluna-acoes-crud
-                [objeto]="objeto"
-                [exibirEdicao]="exibirEdicao"
-                [exibirDelecao]="exibirDelecao"
-                [exibirDetalhes]="exibirDetalhes"
-                (acaoCrud)="executarAcaoCrud($event.acaoCrud, $event.objeto)"
-            </app-coluna-acoes-crud> -->
-        </td>
+      <td mat-cell *matCellDef="let object">
+        <crud-column
+          [object]="object"
+          [showRetrieve]="showRetrieveButton"
+          [showUpdate]="showUpdateButton"
+          [showDelete]="showDeleteButton"
+          (crud)="emitCrudAction($event.crudAction, $event.object)">
+        </crud-column>
+      </td>
     </ng-container>
 
     <!-- exibir com mat sort -->
@@ -44,7 +44,7 @@
     </ng-template>
 
     <!-- exibir detalhes dos objetos -->
-    <div *ngIf="showRetrieveButton; else noDetails">
+    <div *ngIf="showRetrieveCell; else noDetails">
       <td mat-cell *matCellDef="let object" (click)="emitCrudAction(crudAction.Retrieve, object)" [attr.data-label]="column.columnValue" class="td-details">
         <table-cell
           [object]="object"
