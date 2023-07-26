@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TypeColumn } from '../model/TypeColumn.enum';
 import { CrudAction } from '../model/CrudAction.enum';
+import { Gender } from 'src/app/model/enum/gender.enum';
 
 @Component({
   selector: 'table-cell',
@@ -35,5 +36,9 @@ export class TableCellComponent implements OnInit {
 
   get crudAction() {
     return CrudAction;
+  }
+
+  get genderEnum() {
+    return Gender;
   }
 }

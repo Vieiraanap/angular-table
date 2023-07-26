@@ -3,15 +3,15 @@
   no componente em que a tabela será exibida
 -->
 <div>
-  <button mat-mini-fab color="primary" aria-label="Botão Visualizar Detalhes" *ngIf="showRetrieve" (click)="emitCrudAction(crudAction.Retrieve, object)">
-    <mat-icon></mat-icon>
+  <button mat-mini-fab color="primary" title="Visualizar" aria-label="Botão Visualizar Detalhes" *ngIf="showRetrieve" (click)="emitCrudAction(crudAction.Retrieve, object)">
+    <mat-icon>visibility</mat-icon>
   </button>
 
-  <button mat-mini-fab color="primary" aria-label="Botão Editar" *ngIf="showUpdate" (click)="emitCrudAction(crudAction.Update, object)">
-    <mat-icon>pencil</mat-icon>
+  <button mat-mini-fab color="primary" title="Editar" aria-label="Botão Editar" *ngIf="showUpdate" (click)="emitCrudAction(crudAction.Update, object)">
+    <mat-icon>edit</mat-icon>
   </button>
 
-  <button mat-mini-fab color="primary" aria-label="Botão Excluir" *ngIf="showDelete" (click)="emitCrudAction(crudAction.Delete, object)">
-    <mat-icon>trash</mat-icon>
+  <button mat-mini-fab color="primary" title="Excluir" aria-label="Botão Excluir" *ngIf="showDelete" (click)="emitCrudAction(crudAction.Delete, object)">
+    <mat-icon>delete</mat-icon>
   </button>
 </div>

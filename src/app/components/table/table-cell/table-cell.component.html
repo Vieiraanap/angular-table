@@ -3,17 +3,17 @@
 
   <!-- máscara para cpf -->
   <span *ngSwitchCase="columnType.Cpf">
-    <!-- {{ showDataTable(object, columnName) | mask: '000.000.000-00' }} -->
+    {{ showDataTable(object, columnName) | mask: '000.000.000-00' }}
   </span>
 
   <!-- máscara para cnpj -->
   <span *ngSwitchCase="columnType.Cnpj">
-    <!-- {{ showDataTable(object, columnName) | mask: '00.000.000/0000-00' }} -->
+    {{ showDataTable(object, columnName) | mask: '00.000.000/0000-00' }}
   </span>
 
   <!-- máscara para telefone -->
   <span *ngSwitchCase="columnType.Phone">
-    <!-- {{ showDataTable(object, columnName) | mask: '(00)00000-0000' }} -->
+    {{ showDataTable(object, columnName) | mask: '(00)00000-0000' }}
   </span>
 
   <!-- máscara para valores monetários -->
@@ -23,15 +23,13 @@
 
   <!-- máscara para valores percentuais -->
   <span *ngSwitchCase="columnType.Percent">
-    <!-- {{ showDataTable(object, columnName) | multiplicarValor: 100 }}% -->
+    {{ showDataTable(object, columnName) }}%
   </span>
 
-  <!-- máscara para enum -->
-  <!-- <span *ngSwitchCase="columnType.Tag" [ngSwitch]="showDataTable(object, columnName)" class="float-right">
-    <tag-primecap *ngSwitchCase="false" status="INATIVO"></tag-primecap>
-    <tag-primecap *ngSwitchCase="true" status="ATIVO"></tag-primecap>
-    <tag-primecap *ngSwitchDefault [status]="showDataTable(object, columnName)"></tag-primecap>
-  </span> -->
+  <!-- máscara para enum de sexo -->
+  <span *ngSwitchCase="columnType.Gender">
+    {{ showDataTable(object, columnName) | enum: genderEnum }}
+  </span>
 
   <!-- máscara para valores percentuais com casas decimais precisas -->
   <span *ngSwitchCase="columnType.DecimalPercent">

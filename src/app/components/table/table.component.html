@@ -1,10 +1,11 @@
-<div fxLayout="row">
+<div class="row">
   <mat-form-field *ngIf="showSearchBar">
     <input matInput (keyup)="applyFilter($event)" placeholder="Pesquisar">
   </mat-form-field>
 
   <button mat-raised-button color="primary" aria-label="Botão para criar novo item" (click)="emitCrudAction(crudAction.Create, {})" *ngIf="showCreateButton">
-    <mat-icon>plus</mat-icon>
+    Adicionar
+    <mat-icon>add</mat-icon>
   </button>
 </div>
 
