@@ -1,9 +1,9 @@
 <div fxLayout="row">
   <mat-form-field *ngIf="showSearchBar">
-    <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+    <input matInput (keyup)="applyFilter($event)" placeholder="Pesquisar">
   </mat-form-field>
 
-  <button mat-raised-button color="primary" aria-label="Create new item button" (click)="emitCrudAction(crudAction.Create, {})" *ngIf="showCreateButton">
+  <button mat-raised-button color="primary" aria-label="Botão para criar novo item" (click)="emitCrudAction(crudAction.Create, {})" *ngIf="showCreateButton">
     <mat-icon>plus</mat-icon>
   </button>
 </div>
@@ -35,7 +35,7 @@
     </div>
 
     <!-- exibir sem mat sort -->
-    <ng-template #noMatSort class="teste">
+    <ng-template #noMatSort>
       <th id="{{ column.columnValue }}" *matHeaderCellDef class="celula-header">
         <p *ngIf="showColumnName">
           {{ column.columnValue }}
