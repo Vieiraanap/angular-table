@@ -9,4 +9,5 @@ export enum TypeColumn {
   Cpf = 'Cpf',
   Cnpj = 'Cnpj',
   Phone = 'Phone',
+  Gender = 'Gender'
 }
