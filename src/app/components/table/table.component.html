@@ -20,19 +20,7 @@
                 [exibirEdicao]="exibirEdicao"
                 [exibirDelecao]="exibirDelecao"
                 [exibirDetalhes]="exibirDetalhes"
-                [exibirDashboard]="exibirDashboard"
-                [exibirRecusarInvestimento]="exibirRecusarInvestimento"
-                [exibirAssinarInvestimento]="exibirAssinarInvestimento"
-                [exibirConfirmarPagamento]="exibirConfirmarPagamento"
-                [exibirAnalisarInvestimento]="exibirAnalisarInvestimento"
-                [exibirEnviarBoleto]="exibirEnviarBoleto"
-                [exibirAtivacao]="exibirAtivacao"
-                [exibirDesativacao]="exibirDesativacao"
-                [isRodadaInvestimento]="isRodadaInvestimento"
-                [isAssessor]="isAssessor"
                 (acaoCrud)="executarAcaoCrud($event.acaoCrud, $event.objeto)"
-                (acaoExtra)="executarAcaoExtra($event.acaoExtra, $event.objeto)"
-                (acaoInvestimento)="executarAcaoInvestimento($event.acaoInvestimento, $event.investimento)">
             </app-coluna-acoes-crud> -->
         </td>
     </ng-container>
@@ -57,23 +45,23 @@
 
     <!-- exibir detalhes dos objetos -->
     <div *ngIf="showRetrieveButton; else noDetails">
-      <td mat-cell *matCellDef="let objeto" (click)="emitCrudAction(crudAction.Retrieve, objeto)" [attr.data-label]="column.columnValue" class="td-details">
-        <!-- <app-celula-tabela
-            [objeto]="objeto"
-            [coluna]="coluna.prop"
-            [tipo]="coluna.tipo">
-        </app-celula-tabela> -->
+      <td mat-cell *matCellDef="let object" (click)="emitCrudAction(crudAction.Retrieve, object)" [attr.data-label]="column.columnValue" class="td-details">
+        <table-cell
+          [object]="object"
+          [columnName]="column.columnName"
+          [typeColumn]="column.typeColumn">
+        </table-cell>
       </td>
     </div>
 
     <!-- exibir objetos sem detalhamento -->
     <ng-template #noDetails>
-      <td mat-cell *matCellDef="let objeto" [attr.data-label]="column.columnValue" class="td-no-details">
-        <!-- <app-celula-tabela
-            [objeto]="objeto"
-            [coluna]="coluna.prop"
-            [tipo]="coluna.tipo">
-        </app-celula-tabela> -->
+      <td mat-cell *matCellDef="let object" [attr.data-label]="column.columnValue" class="td-no-details">
+        <table-cell
+          [object]="object"
+          [columnName]="column.columnName"
+          [typeColumn]="column.typeColumn">
+        </table-cell>
       </td>
     </ng-template>
 

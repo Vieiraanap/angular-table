@@ -5,10 +5,14 @@ import { TableRoutingModule } from './table-routing.module';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { MatPaginatorIntl } from '@angular/material/paginator';
 import { CustomPaginator } from 'src/app/components/table/utils/custom-paginator.config';
+import { TableCellComponent } from './table-cell/table-cell.component';
 
 
 @NgModule({
-  declarations: [TableComponent],
+  declarations: [
+    TableComponent,
+    TableCellComponent
+  ],
   imports: [
     MaterialModule,
     TableRoutingModule

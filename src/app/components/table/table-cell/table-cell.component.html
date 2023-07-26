@@ -1,0 +1,60 @@
+
+<container-element [ngSwitch]="typeColumn">
+
+  <!-- máscara para cpf -->
+  <span *ngSwitchCase="columnType.Cpf">
+    <!-- {{ showDataTable(object, columnName) | mask: '000.000.000-00' }} -->
+  </span>
+
+  <!-- máscara para cnpj -->
+  <span *ngSwitchCase="columnType.Cnpj">
+    <!-- {{ showDataTable(object, columnName) | mask: '00.000.000/0000-00' }} -->
+  </span>
+
+  <!-- máscara para telefone -->
+  <span *ngSwitchCase="columnType.Phone">
+    <!-- {{ showDataTable(object, columnName) | mask: '(00)00000-0000' }} -->
+  </span>
+
+  <!-- máscara para valores monetários -->
+  <span *ngSwitchCase="columnType.Currency">
+    {{ showDataTable(object, columnName) | currency }}
+  </span>
+
+  <!-- máscara para valores percentuais -->
+  <span *ngSwitchCase="columnType.Percent">
+    <!-- {{ showDataTable(object, columnName) | multiplicarValor: 100 }}% -->
+  </span>
+
+  <!-- máscara para enum -->
+  <!-- <span *ngSwitchCase="columnType.Tag" [ngSwitch]="showDataTable(object, columnName)" class="float-right">
+    <tag-primecap *ngSwitchCase="false" status="INATIVO"></tag-primecap>
+    <tag-primecap *ngSwitchCase="true" status="ATIVO"></tag-primecap>
+    <tag-primecap *ngSwitchDefault [status]="showDataTable(object, columnName)"></tag-primecap>
+  </span> -->
+
+  <!-- máscara para valores percentuais com casas decimais precisas -->
+  <span *ngSwitchCase="columnType.DecimalPercent">
+    {{ showDataTable(object, columnName) | number: '1.5-5'}}%
+  </span>
+
+  <!-- máscara para datas -->
+  <span *ngSwitchCase="columnType.ShortDate">
+    {{ showDataTable(object, columnName) | date: 'shortDate' }}
+  </span>
+
+  <!-- máscara para datas com mês e ano-->
+  <span *ngSwitchCase="columnType.MonthYearDate">
+    {{ showDataTable(object, columnName) | date: 'MM/yyyy' }}
+  </span>
+
+  <!-- máscara para data e hora -->
+  <span *ngSwitchCase="columnType.MediumDate">
+    {{ showDataTable(object, columnName) | date: 'medium' }}
+  </span>
+
+  <span *ngSwitchDefault class="text-capitalize">
+    {{ showDataTable(object, columnName)?.toLocaleString().toLowerCase() }}
+  </span>
+</container-element>
+
