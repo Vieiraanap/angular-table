@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {
-    path: 'generic-table',
-    loadChildren: () => import('./components/table/table.module').then(m => m.TableModule),
-  }
+    path: 'table',
+    children: [
+      {
+        path: 'person',
+        loadChildren: () => import('./views/table-person/table-person.module').then(m => m.TablePersonModule),
+      }
+    ]
+  },
+
 ];
 
 @NgModule({

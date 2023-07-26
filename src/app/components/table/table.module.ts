@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { TableComponent } from './table.component';
-import { TableRoutingModule } from './table-routing.module';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { MatPaginatorIntl } from '@angular/material/paginator';
 import { CustomPaginator } from 'src/app/components/table/utils/custom-paginator.config';
 import { TableCellComponent } from './table-cell/table-cell.component';
 import { TableCrudColumnComponent } from './table-crud-column/table-crud-column.component';
-
+import { PipesModule } from 'src/app/pipes/pipes.module';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -17,10 +17,16 @@ import { TableCrudColumnComponent } from './table-crud-column/table-crud-column.
   ],
   imports: [
     MaterialModule,
-    TableRoutingModule
+    PipesModule,
+    NgxMaskDirective,
+    NgxMaskPipe,
+  ],
+  exports: [
+    TableComponent
   ],
   providers: [
     DatePipe,
+    provideNgxMask(),
     { provide: MatPaginatorIntl, useValue: CustomPaginator()}
   ]
 })
