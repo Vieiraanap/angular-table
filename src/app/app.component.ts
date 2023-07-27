@@ -20,4 +20,8 @@ export class AppComponent {
   redirectTableFirm() {
     this.router.navigate(['table/firm']);
   }
+
+  redirectTableProduct() {
+    this.router.navigate(['table/product']);
+  }
 }

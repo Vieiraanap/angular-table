@@ -13,6 +13,10 @@ const routes: Routes = [
       {
         path: 'firm',
         loadChildren: () => import('./views/table-firm/table-firm.module').then(m => m.TableFirmModule),
+      },
+      {
+        path: 'product',
+        loadChildren: () => import('./views/table-product/table-product.module').then(m => m.TableProductModule),
       }
     ]
   },

@@ -1,0 +1,23 @@
+<app-table
+  [dataTable]="productList"
+  [columnDef]="tableColumns"
+  [showSearchBar]="true"
+  [showCrudActions]="true"
+  [showRetrieveButton]="true"
+  [showUpdateButton]="true"
+  [showDeleteButton]="true"
+  [backendSearch]="true"
+  [backendPagination]="true"
+  [pageConfigDef]="configPage"
+  [newPageSize]="[1,3,5]"
+  (search)="getSearchEvent($event)"
+  (paginate)="getPaginationEvent($event)"
+></app-table>
+
+<div>
+  <span>PageEvent: </span>{{ pageEvent | json }}
+</div>
+
+<div>
+  <span>SearchEvent: </span>{{ searchEvent | json }}
+</div>
