@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { CrudEvent } from '../model/CrudEvent';
-import { CrudAction } from '../model/CrudAction.enum';
+import { CrudEvent } from '../model/crud-event';
+import { CrudAction } from '../model/crud-action.enum';
 
 @Component({
   selector: 'crud-column',

@@ -69,7 +69,7 @@
   </ng-container>
 
   <!-- em caso de objetos com detalhamento, aplicar classe  -->
-  <div *ngIf="showRetrieveButton; else noDetailsLine">
+  <div *ngIf="showRetrieveCell; else noDetailsLine">
     <tr mat-header-row *matHeaderRowDef="columnsName"></tr>
     <tr class="tr-details" mat-row *matRowDef="let row; columns: columnsName;
       let i = index"

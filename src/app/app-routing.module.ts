@@ -9,6 +9,10 @@ const routes: Routes = [
       {
         path: 'person',
         loadChildren: () => import('./views/table-person/table-person.module').then(m => m.TablePersonModule),
+      },
+      {
+        path: 'firm',
+        loadChildren: () => import('./views/table-firm/table-firm.module').then(m => m.TableFirmModule),
       }
     ]
   },

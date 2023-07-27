@@ -1,12 +1,13 @@
 <app-table
-  [dataTable]="personList"
+  [dataTable]="firmList"
   [columnDef]="tableColumns"
-  [showSearchBar]="true"
   [showCrudActions]="true"
   [showCreateButton]="true"
-  [showRetrieveButton]="true"
+  [showRetrieveCell]="true"
   [showUpdateButton]="true"
   [showDeleteButton]="true"
+  [showMatSort]="false"
+  [showPaginator]="false"
   (crud)="getCrudEvent($event)"
 ></app-table>
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Column, IColumn } from 'src/app/components/table/model/Column.model';
-import { CrudEvent } from 'src/app/components/table/model/CrudEvent';
-import { TypeColumn } from 'src/app/components/table/model/TypeColumn.enum';
+import { Column, IColumn } from 'src/app/components/table/model/column.model';
+import { CrudEvent } from 'src/app/components/table/model/crud-event';
+import { TypeColumn } from 'src/app/components/table/model/type-column.enum';
 import { IPerson } from 'src/app/model/person.model';
 import { TableDataService } from 'src/app/services/table-data.service';
 
@@ -21,6 +21,7 @@ export class TablePersonComponent implements OnInit {
   ];
 
   personList: IPerson [] = [];
+  crudEvent: CrudEvent<IPerson>;
 
   constructor(
     private tableService: TableDataService
@@ -32,5 +33,6 @@ export class TablePersonComponent implements OnInit {
 
   getCrudEvent(event: CrudEvent<IPerson>) {
     console.log(event);
+    this.crudEvent = event;
   }
 }

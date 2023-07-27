@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
-import { IColumn } from './model/Column.model';
+import { IColumn } from './model/column.model';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
-import { Pagination } from './model/Pagination.model';
-import { CrudAction } from './model/CrudAction.enum';
-import { CrudEvent } from './model/CrudEvent';
-import { SearchEvent } from './model/SearchEvent';
+import { Pagination } from './model/pagination.model';
+import { CrudAction } from './model/crud-action.enum';
+import { CrudEvent } from './model/crud-event';
+import { SearchEvent } from './model/search-event';
 import { MatSort } from '@angular/material/sort';
-import { TypeColumn } from './model/TypeColumn.enum';
+import { TypeColumn } from './model/type-column.enum';
 
 @Component({
   selector: 'app-table',

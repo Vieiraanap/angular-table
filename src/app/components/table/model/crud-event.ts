@@ -1,4 +1,4 @@
-import { CrudAction } from "./CrudAction.enum";
+import { CrudAction } from "./crud-action.enum";
 
 export interface CrudEvent<T> {
   crudAction: CrudAction;

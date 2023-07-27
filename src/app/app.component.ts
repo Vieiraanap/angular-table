@@ -16,4 +16,8 @@ export class AppComponent {
   redirectTablePerson() {
     this.router.navigate(['table/person']);
   }
+
+  redirectTableFirm() {
+    this.router.navigate(['table/firm']);
+  }
 }

@@ -1,4 +1,4 @@
-import { TypeColumn } from './TypeColumn.enum';
+import { TypeColumn } from './type-column.enum';
 
 export interface IColumn {
   columnName: string;
