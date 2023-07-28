@@ -38,7 +38,7 @@ p {
   }
 
   /*  esconder o header */
-  .mat-mdc-header-cell {
+  .mat-mdc-header-row {
     border: 10px solid;
     clip: rect(0 0 0 0);
     height: 1px;
