@@ -214,3 +214,7 @@ get genderEnum() {
 A resposividade da tabela é de responsabilidade do arquivo `table.component.css`.
 O atributo `content: attr(data-label)` utiliza o valor correspondente ao valor da coluna (columnValue), ou seja, o nome da coluna que é exibido no template, para exibi-lo ao lado dos dados.
 Importante manter a referência `[attr.data-label]="column.columnValue"` a este atributo (content) no arquivo `table.component.html`.
+
+# Bibliotecas de Terceiros
+
+* ngx-mask - v15.1.0
