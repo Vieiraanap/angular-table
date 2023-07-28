@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { IColumn, Column } from 'src/app/components/table/model/column.model';
-import { CrudEvent } from 'src/app/components/table/model/crud-event';
 import { Pagination } from 'src/app/components/table/model/pagination.model';
 import { SearchEvent } from 'src/app/components/table/model/search-event';
 import { TypeColumn } from 'src/app/components/table/model/type-column.enum';
