@@ -89,7 +89,7 @@ Presente dentro do componente da tabela, que possui os seguintes atributos:
 Nome      | Valor Padrão | Tipo      | Objetivo
 ----------|--------------|-----------|----------
 object    | undefined    | any       |valor a ser exibido dentro de cada célula da tabela
-columnName| undefined    | string    |nome da coluna
+columnName| undefined    | string    |nome da coluna exibido na tela do usuário
 typeColumn| undefined    | TypeColumn|tipo de dados que será exibido em cada coluna
 
 O método `showDataTable()`
@@ -201,16 +201,16 @@ get genderEnum() {
 ~~~
 
 ~~~html
-  <!-- máscara para enum de sexo -->
-  <span *ngSwitchCase="columnType.Gender">
-    {{ showDataTable(object, columnName) | enum: genderEnum }}
-  </span>
+<!-- máscara para enum de sexo -->
+<span *ngSwitchCase="columnType.Gender">
+  {{ showDataTable(object, columnName) | enum: genderEnum }}
+</span>
 ~~~
 
-**O arquivo `pipes/enum.pipe.ts` declara pipe genérico que extrai valores de qualquer enum**
+**Obs: o arquivo `pipes/enum.pipe.ts` declara pipe genérico que extrai valores de qualquer enum**
 
 # Responsividade
 
-Resposividade da tabela é de responsabilidade do arquivo `table.component.css`.
+A resposividade da tabela é de responsabilidade do arquivo `table.component.css`.
 O atributo `content: attr(data-label)` utiliza o valor correspondente ao valor da coluna (columnValue), ou seja, o nome da coluna que é exibido no template, para exibi-lo ao lado dos dados.
 Importante manter a referência `[attr.data-label]="column.columnValue"` a este atributo (content) no arquivo `table.component.html`.
