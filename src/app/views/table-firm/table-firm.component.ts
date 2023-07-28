@@ -16,7 +16,7 @@ export class TableFirmComponent implements OnInit {
     new Column('name', 'Nome'),
     new Column('cnpj', 'CNPJ', TypeColumn.Cnpj),
     new Column('email', 'E-mail'),
-    new Column('owner.name', 'Owner'),
+    new Column('owner.name', 'Proprietário'),
   ];
 
   firmList: IFirm [] = [];
