@@ -49,14 +49,14 @@ Tabela Genérica com Angular Material
 </app-table>
 ~~~
 
-Nome      | Valor Padrão  | Tipo     | Objetivo
+Nome      | Valor Padrão  | Tipo     | Descrição
 ----------|---------------|----------|----------
 dataTable | []            | any[]    |dados recebidos do componente pai
 columnDef | []            | IColumn[]|definição das colunas no componente pai
 
 ### Opcionais
 
-Nome                  | Valor Padrão| Tipo     | Objetivo
+Nome                  | Valor Padrão| Tipo     | Descrição
 ----------------------|-------------|----------|----------
 backendPagination     | false       | boolean  |habilita paginação de dados no backend
 backendSearch         | false       | boolean  |habilita pesquisa de dados no backend
@@ -75,7 +75,7 @@ showDeleteButton      | false       | boolean  |exibe botão para excluir objeto
 
 ## Eventos - @Output()
 
-Nome    | Valor Padrão | Tipo                         | Objetivo
+Nome    | Valor Padrão | Tipo                         | Descrição
 --------|--------------|------------------------------|----------
 crud    |EventEmitter()|EventEmitter<CrudEvent<any>>  |emite qual ação crud e objeto foram solicitados
 paginate|EventEmitter()| EventEmitter<PageEvent>      |emite tamanho e índice da página solicitada
@@ -86,7 +86,7 @@ search  |EventEmitter()|EventEmitter<SearchEvent<any>>|emite o valor a ser busca
 A exibição dos dados é de competência do componente `<table-cell>`
 Presente dentro do componente da tabela, que possui os seguintes atributos: 
 
-Nome      | Valor Padrão | Tipo      | Objetivo
+Nome      | Valor Padrão | Tipo      | Descrição
 ----------|--------------|-----------|----------
 object    | undefined    | any       |valor a ser exibido dentro de cada célula da tabela
 columnName| undefined    | string    |nome da coluna exibido na tela do usuário
